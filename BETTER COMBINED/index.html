@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Explore.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <h2>EXPLORE.</h2>
+        <a href="#discover">Discover ↗</a>
+    </nav>
+
+    <section class="hero">
+        <div class="content">
+
+            <small>DISCOVER THE WORLD</small>
+            <h1 id="title">Beyond the Ordinary.</h1>
+            <p id="description">Discover breathtaking mountain views.</p>
+
+            <input type="search" id="search"
+                placeholder="Where do you want to go?"
+                aria-label="Search destinations"
+                oninput="searchPlaces()">
+
+            <h3 id="discover">Popular Destinations</h3>
+
+            <div class="cards">
+                <button class="card mountain"
+                    onmouseover="show(0)" onclick="show(0)"
+                    onfocus="show(0)">Mountains</button>
+
+                <button class="card ocean"
+                    onmouseover="show(1)" onclick="show(1)"
+                    onfocus="show(1)">Ocean</button>
+
+                <button class="card forest"
+                    onmouseover="show(2)" onclick="show(2)"
+                    onfocus="show(2)">Forest</button>
+            </div>
+
+            <p id="empty" hidden>No destinations found.</p>
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
