@@ -1,0 +1,208 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #101010;
+    color: white;
+}
+
+/* NAVIGATION */
+
+nav {
+    position: absolute;
+    width: 100%;
+    padding: 25px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.logo {
+    letter-spacing: 4px;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+}
+
+/* HERO SECTION */
+
+.hero {
+    min-height: 90vh;
+    background-color: #263c35;
+    background-image:
+        linear-gradient(to right, #000c, transparent),
+        linear-gradient(to top, #101010, transparent),
+        url("images/mountain.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    padding: 100px 6%;
+}
+
+.content {
+    max-width: 650px;
+    animation: fade 0.8s ease;
+}
+
+.content small {
+    letter-spacing: 5px;
+    color: #ccc;
+}
+
+.content h1 {
+    font-size: clamp(45px, 7vw, 90px);
+    line-height: 1;
+    margin: 20px 0;
+}
+
+.content p {
+    color: #ccc;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+/* BUTTON */
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background: white;
+    color: black;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ccc;
+    transform: translateY(-3px);
+}
+
+/* CARDS */
+
+.discover {
+    position: relative;
+    margin-top: -60px;
+    padding: 30px 6%;
+}
+
+.discover h2 {
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 10px;
+}
+
+.card {
+    flex: 1 0 240px;
+    height: 200px;
+    border-radius: 10px;
+    border: none;
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.mountain {
+    background-color: #485b4e;
+    background-image:
+        linear-gradient(transparent, #000b),
+        url("images/mountain.jpg");
+}
+
+.ocean {
+    background-color: #235575;
+    background-image:
+        linear-gradient(transparent, #000b),
+        url("images/ocean.jpg");
+}
+
+.forest {
+    background-color: #253f29;
+    background-image:
+        linear-gradient(transparent, #000b),
+        url("images/forest.jpg");
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 40px;
+    color: #888;
+}
+
+/* ANIMATION */
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: 85vh;
+    }
+
+    .card {
+        flex: 0 0 220px;
+        height: 150px;
+    }
+
+    .links a {
+        margin-left: 10px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none;
+        transition: none;
+        scroll-behavior: auto;
+    }
+}
