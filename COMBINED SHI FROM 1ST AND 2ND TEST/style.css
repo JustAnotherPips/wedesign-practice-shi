@@ -1,0 +1,136 @@
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    background: #101010;
+    color: white;
+}
+
+nav {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 6%;
+}
+
+nav h2 { letter-spacing: 4px; }
+nav a { color: white; text-decoration: none; }
+nav a:hover { color: #aaa; }
+
+.hero {
+    --image: url("images/mountain.jpg");
+
+    min-height: 75vh;
+    background-color: #293c35;
+    background-image:
+        linear-gradient(to right, #000b, transparent),
+        linear-gradient(to top, #101010, transparent),
+        var(--image);
+
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 100px 6%;
+}
+
+.content { max-width: 650px; }
+
+small { letter-spacing: 5px; }
+
+h1 {
+    font-size: clamp(40px, 7vw, 95px);
+    line-height: 1;
+    margin: 20px 0;
+}
+
+p { color: #ccc; }
+
+/* HUGE SEARCH BAR */
+
+#search {
+    position: relative;
+    display: block;
+    width: min(800px, 88%);
+    margin: -35px auto 30px;
+    padding: 25px 30px;
+    background: #222d;
+    backdrop-filter: blur(15px);
+    color: white;
+    border: 1px solid #555;
+    border-radius: 50px;
+    font-size: 20px;
+    outline: none;
+    transition: 0.3s;
+}
+
+#search:hover { border-color: #aaa; }
+
+#search:focus {
+    border-color: white;
+    box-shadow: 0 0 30px #ffffff20;
+    transform: scale(1.02);
+}
+
+/* DESTINATION CARDS */
+
+#discover { padding: 20px 6% 50px; }
+
+.cards {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 10px;
+}
+
+.card {
+    flex: 1 0 220px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-color: #293c35;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    color: white;
+    font-size: 23px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card:hover, .card:focus {
+    transform: translateY(-7px);
+    border-color: white;
+}
+
+.mountain {
+    background-image: linear-gradient(transparent, #000a),
+        url("images/mountain.jpg");
+}
+
+.ocean {
+    background-image: linear-gradient(transparent, #000a),
+        url("images/ocean.jpg");
+}
+
+.forest {
+    background-image: linear-gradient(transparent, #000a),
+        url("images/forest.jpg");
+}
+
+@media (max-width: 768px) {
+    .card { height: 150px; }
+    #search { font-size: 16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * { transition: none; scroll-behavior: auto; }
+}

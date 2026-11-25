@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Discover.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <h2>discover<span>.</span></h2>
+        <a href="#explore">Explore ↗</a>
+    </nav>
+
+    <section class="hero">
+        <h1>Find your next <span>escape.</span></h1>
+        <p>The world is closer than you think.</p>
+        <input id="search" type="search"
+            placeholder="Where do you want to go?"
+            aria-label="Search destinations"
+            oninput="searchPlaces()">
+    </section>
+
+    <section class="collection" id="explore">
+        <div class="list">
+            <button onmouseover="show('mountain')" onclick="show('mountain')">01 — Mountains ↗</button>
+            <button onmouseover="show('ocean')" onclick="show('ocean')">02 — Ocean ↗</button>
+            <button onmouseover="show('forest')" onclick="show('forest')">03 — Forest ↗</button>
+        </div>
+
+        <img id="preview" src="images/mountain.jpg"
+             alt="Mountain landscape">
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
